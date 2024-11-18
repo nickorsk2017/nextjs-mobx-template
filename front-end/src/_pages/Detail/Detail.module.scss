@@ -1,0 +1,44 @@
+@use "src/styles/mixins" as *;
+
+.detail {
+    padding-bottom: 119px;
+    display: flex;
+    flex-direction: column;
+
+    &__left {
+        width: 100%;
+    }
+
+    &__right {
+        width: 100%;
+    }
+
+    &__title {
+        font-family: "Avenir Roman";
+        font-size: 24px;
+        font-weight: 300;
+        color: $BLACK;
+        margin-top: 20px;
+    }
+
+    @include desktop {
+        flex-direction: row;
+        justify-content: flex-start;
+
+        &__left {
+            width: 461px;
+        }
+
+        &__right {
+            padding-left: 47px;
+        }
+
+        &__name {
+            margin: 0;   
+        }
+
+        &__description {
+            width: 600px;
+        }
+    }
+}
